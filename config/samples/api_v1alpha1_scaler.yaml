@@ -1,0 +1,14 @@
+apiVersion: api.scaler.com/v1alpha1
+kind: Scaler
+metadata:
+  labels:
+    app.kubernetes.io/name: deploy-scaler
+    app.kubernetes.io/managed-by: kustomize
+  name: scaler-sample
+spec:
+  start: 16
+  end: 17
+  replicas: 2
+  deployments: 
+    - name: tigera-operator
+      namespace: tigera-operator
